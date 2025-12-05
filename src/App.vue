@@ -1,38 +1,89 @@
 <template>
   <div id="app">
-    <!-- Шапка сайта -->
-    <header class="header">
-      <div class="container">
-        <div class="header-content">
-          <div class="logo">
-            <img src="https://sun9-15.userapi.com/s/v1/ig2/hitnOpWUtCoBURUrz4sQZOoRnwZJMkwq3ENl95maYcol-3RZIfaWA20CDotBLVzSM0bl_Ekgi6a61-PM0W7PJMv_.jpg?quality=95&as=32x28,48x42,72x63,108x95,160x141,240x211,326x287&from=bu&cs=326x0" 
-                 alt="Milky Co Логотип" class="logo-img">
-            <div class="logo-text">
-              <h1>Milky Co</h1>
-              <p>Молочное совершенство с 2025 года</p>
-            </div>
-          </div>
-          
-          <nav class="nav">
-            <a href="#" class="nav-link active">Главная</a>
-            <a href="#" class="nav-link">О компании</a>
-            <a href="#" class="nav-link">Продукция</a>
-            <a href="#" class="nav-link">Контакты</a>
-          </nav>
-        </div>
-      </div>
-    </header>
-
-    <!-- Герой-секция -->
+    <!-- Герой-секция с фоновым фото фермы -->
     <section class="hero">
+      <!-- Фоновое изображение фермы -->
+      <div class="hero-bg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Farm_Study_%281%29_%288625798026%29.jpg" 
+             alt="Ферма Milky Co" class="farm-image">
+        <div class="hero-overlay"></div>
+      </div>
+      
+      <!-- Прозрачный хедер -->
+      <header class="header transparent">
+        <div class="container">
+          <div class="header-content">
+            <div class="logo">
+              <img src="https://sun9-15.userapi.com/s/v1/ig2/hitnOpWUtCoBURUrz4sQZOoRnwZJMkwq3ENl95maYcol-3RZIfaWA20CDotBLVzSM0bl_Ekgi6a61-PM0W7PJMv_.jpg?quality=95&as=32x28,48x42,72x63,108x95,160x141,240x211,326x287&from=bu&cs=326x0" 
+                   alt="Milky Co Логотип" class="logo-img">
+              <div class="logo-text">
+                <h1>Milky Co</h1>
+                <p>Молочное совершенство</p>
+              </div>
+            </div>
+            
+            <nav class="nav">
+              <a href="#" class="nav-link active">Главная</a>
+              <a href="#" class="nav-link">О компании</a>
+              <a href="#" class="nav-link">Продукция</a>
+              <a href="#" class="nav-link">Контакты</a>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <!-- Контент герой-секции -->
       <div class="container">
         <div class="hero-content">
           <div class="hero-text">
-            <h2 class="hero-title">Молочная свежесть<br>в каждой капле</h2>
-            <p class="hero-subtitle">Современные технологии и традиционные рецепты<br>для идеального вкуса с 2025 года</p>
-            <button class="hero-button" @click="scrollToProducts">Исследовать продукты</button>
+            <h2 class="hero-title">Натуральные молочные продукты<br>от нашей фермы к вашему столу</h2>
+            <p class="hero-subtitle">С 2025 года мы выращиваем счастливых коров и производим<br>молочные продукты высочайшего качества в экологически чистых условиях</p>
+            <div class="hero-buttons">
+              <button class="hero-button primary" @click="scrollToProducts">Посмотреть продукцию</button>
+              <button class="hero-button secondary">Узнать о доставке</button>
+            </div>
           </div>
-          <div class="hero-image">
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-number">500+</div>
+              <div class="stat-label">Довольных клиентов</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">100+</div>
+              <div class="stat-label">Гектаров пастбищ</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">24/7</div>
+              <div class="stat-label">Контроль качества</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Секция с маскотом -->
+    <section class="mascot-section">
+      <div class="container">
+        <div class="mascot-content">
+          <div class="mascot-text">
+            <h2 class="section-title">Знакомьтесь, наш символ —<br>Веселый Бурёнка</h2>
+            <p class="section-subtitle">Он представляет нашу философию: натуральность, качество и забота о каждом клиенте. Наши коровы живут в свободных условиях и питаются только натуральными кормами.</p>
+            <div class="features">
+              <div class="feature">
+                <div class="feature-icon">🌿</div>
+                <div class="feature-text">Экологически чистые пастбища</div>
+              </div>
+              <div class="feature">
+                <div class="feature-icon">❤️</div>
+                <div class="feature-text">Заботливый уход за животными</div>
+              </div>
+              <div class="feature">
+                <div class="feature-icon">⚡</div>
+                <div class="feature-text">Современные технологии производства</div>
+              </div>
+            </div>
+          </div>
+          <div class="mascot-image">
             <div class="mascot-container">
               <img src="https://sun9-46.userapi.com/s/v1/ig2/Ab3GtzvlKHXgM8IJ-9Bk7QcIXKluWHMp5P7OcY4hruxW0aZORQfeQ6DLtkV_7QZEnz3tYFqHdscRMTqpFsxvznjX.jpg?quality=95&as=32x32,48x48,72x72,108x107,160x159,240x239,356x354&from=bu&cs=356x0" 
                    alt="Маскот Milky Co" 
@@ -46,22 +97,24 @@
     <!-- О компании -->
     <section class="about">
       <div class="container">
-        <h2 class="section-title">Почему Milky Co?</h2>
+        <h2 class="section-title">Почему выбирают Milky Co?</h2>
+        <p class="section-subtitle">Наши принципы работы обеспечивают безупречное качество продукции</p>
+        
         <div class="about-content">
           <div class="about-card">
-            <div class="about-icon">🌱</div>
-            <h3>Инновации в молочном деле</h3>
-            <p>Используем новейшие технологии для сохранения свежести и питательных свойств молочных продуктов.</p>
+            <div class="about-icon">🏭</div>
+            <h3>Современное производство</h3>
+            <p>Используем новейшее оборудование европейского качества для сохранения всех полезных свойств молока.</p>
           </div>
           <div class="about-card">
-            <div class="about-icon">🏆</div>
-            <h3>Премиальное качество</h3>
-            <p>Каждый продукт проходит 5 ступеней контроля качества для гарантии безупречного вкуса.</p>
+            <div class="about-icon">🔬</div>
+            <h3>Лабораторный контроль</h3>
+            <p>Каждая партия продукции проходит строгий контроль в собственной лаборатории по 25 параметрам.</p>
           </div>
           <div class="about-card">
-            <div class="about-icon">🚚</div>
-            <h3>Мгновенная доставка</h3>
-            <p>Доставляем свежайшую продукцию в термоконтейнерах в течение 12 часов после производства.</p>
+            <div class="about-icon">🚛</div>
+            <h3>Собственный автопарк</h3>
+            <p>Доставляем продукцию в термоконтейнерах, поддерживающих оптимальную температуру.</p>
           </div>
         </div>
       </div>
@@ -75,7 +128,6 @@
         
         <div class="products-scroll-container" ref="scrollContainer">
           <div class="products-track" ref="productsTrack">
-            <!-- Карточки товаров будут здесь -->
             <ProductCard 
               v-for="product in products" 
               :key="product.id"
@@ -127,6 +179,15 @@
             <p>Москва, Молочный проезд, д. 15</p>
             <p>+7 (495) 765-43-21</p>
             <p>info@milkyco.ru</p>
+          </div>
+          <div class="footer-social">
+            <p>Мы в соцсетях:</p>
+            <div class="social-icons">
+              <a href="#" class="social-icon">📘</a>
+              <a href="#" class="social-icon">📷</a>
+              <a href="#" class="social-icon">📹</a>
+              <a href="#" class="social-icon">💬</a>
+            </div>
           </div>
         </div>
       </div>
@@ -304,14 +365,74 @@ body {
   padding: 0 20px;
 }
 
-/* Шапка */
-.header {
-  background: linear-gradient(135deg, #4a90e2 0%, #63b3ed 100%);
-  padding: 20px 0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  position: sticky;
+/* Герой-секция с фоновой фоткой */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
   top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+.farm-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(74, 144, 226, 0.3) 0%, rgba(32, 32, 32, 0.6) 100%);
+  z-index: -1;
+}
+
+/* Прозрачный хедер */
+.header.transparent {
+  background: transparent;
+  padding: 25px 0;
+  box-shadow: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
+}
+
+.header.transparent .logo-text h1,
+.header.transparent .logo-text p,
+.header.transparent .nav-link {
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header.transparent .nav-link {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.header.transparent .nav-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: white;
+}
+
+.header.transparent .nav-link.active {
+  background: white;
+  color: #4a90e2;
+  border-color: white;
 }
 
 .header-content {
@@ -337,7 +458,6 @@ body {
 }
 
 .logo-text h1 {
-  color: white;
   font-size: 28px;
   margin-bottom: 5px;
   font-weight: 700;
@@ -345,93 +465,168 @@ body {
 }
 
 .logo-text p {
-  color: rgba(255, 255, 255, 0.9);
   font-size: 14px;
+  opacity: 0.9;
 }
 
 .nav {
   display: flex;
-  gap: 30px;
+  gap: 20px;
 }
 
 .nav-link {
-  color: white;
   text-decoration: none;
   font-weight: 500;
-  padding: 10px 20px;
+  padding: 10px 25px;
   border-radius: 25px;
   transition: all 0.3s ease;
 }
 
-.nav-link:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: translateY(-2px);
-}
-
-.nav-link.active {
-  background: white;
-  color: #4a90e2;
-}
-
-/* Герой-секция */
-.hero {
-  background: linear-gradient(135deg, #ebf8ff 0%, #bee3f8 100%);
-  padding: 80px 0;
-  overflow: hidden;
-}
-
+/* Контент герой-секции */
 .hero-content {
+  flex: 1;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 150px 0 100px;
+  max-width: 800px;
 }
 
 .hero-text {
-  flex: 1;
-  animation: fadeInLeft 1s ease;
+  animation: fadeInUp 1s ease;
 }
 
 .hero-title {
-  font-size: 48px;
-  color: #2d3748;
-  margin-bottom: 20px;
+  font-size: 56px;
+  margin-bottom: 25px;
   line-height: 1.2;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .hero-subtitle {
-  font-size: 20px;
-  color: #4a90e2;
-  margin-bottom: 30px;
+  font-size: 22px;
+  margin-bottom: 40px;
+  opacity: 0.95;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 60px;
 }
 
 .hero-button {
-  background: linear-gradient(135deg, #ed8936 0%, #dd6b20 100%);
-  color: white;
-  border: none;
   padding: 18px 40px;
   font-size: 18px;
   border-radius: 30px;
   cursor: pointer;
   transition: all 0.3s ease;
   font-weight: 600;
-  box-shadow: 0 6px 20px rgba(237, 137, 54, 0.3);
+  border: none;
 }
 
-.hero-button:hover {
+.hero-button.primary {
+  background: linear-gradient(135deg, #ed8936 0%, #dd6b20 100%);
+  color: white;
+  box-shadow: 0 6px 20px rgba(237, 137, 54, 0.4);
+}
+
+.hero-button.primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(237, 137, 54, 0.4);
+  box-shadow: 0 8px 25px rgba(237, 137, 54, 0.5);
 }
 
-/* Стили для маскота */
-.hero-image {
+.hero-button.secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.hero-button.secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+.hero-stats {
+  display: flex;
+  gap: 50px;
+  animation: fadeInUp 1.2s ease;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #ed8936;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.stat-label {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* Секция с маскотом */
+.mascot-section {
+  padding: 100px 0;
+  background: white;
+}
+
+.mascot-content {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.mascot-text {
   flex: 1;
-  animation: fadeInRight 1s ease;
 }
 
-.mascot-container {
-  position: relative;
-  display: inline-block;
+.mascot-image {
+  flex: 1;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 42px;
+  color: #2d3748;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.section-subtitle {
+  font-size: 20px;
+  color: #718096;
+  margin-bottom: 40px;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.feature-icon {
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+.feature-text {
+  font-size: 18px;
+  color: #2d3748;
+  font-weight: 500;
 }
 
 .mascot {
@@ -441,7 +636,7 @@ body {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   transform: perspective(1000px) rotateY(-10deg) rotateX(5deg);
   transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
-  border: 3px solid white;
+  border: 3px solid #4a90e2;
   animation: float 6s ease-in-out infinite;
 }
 
@@ -461,35 +656,21 @@ body {
 
 /* О компании */
 .about {
-  padding: 80px 0;
-  background: white;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 36px;
-  color: #2d3748;
-  margin-bottom: 15px;
-}
-
-.section-subtitle {
-  text-align: center;
-  color: #666;
-  margin-bottom: 50px;
-  font-size: 18px;
+  padding: 100px 0;
+  background: #f7fafc;
 }
 
 .about-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  margin-top: 50px;
+  gap: 40px;
+  margin-top: 60px;
 }
 
 .about-card {
   background: white;
-  padding: 40px 30px;
-  border-radius: 15px;
+  padding: 50px 30px;
+  border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   text-align: center;
   transition: all 0.3s ease;
@@ -503,25 +684,26 @@ body {
 }
 
 .about-icon {
-  font-size: 48px;
-  margin-bottom: 20px;
+  font-size: 56px;
+  margin-bottom: 25px;
 }
 
 .about-card h3 {
   color: #2d3748;
-  margin-bottom: 15px;
-  font-size: 22px;
+  margin-bottom: 20px;
+  font-size: 24px;
 }
 
 .about-card p {
   color: #666;
   line-height: 1.8;
+  font-size: 16px;
 }
 
 /* Каталог товаров */
 .products {
-  padding: 80px 0;
-  background: #f7fafc;
+  padding: 100px 0;
+  background: white;
 }
 
 .products-scroll-container {
@@ -547,7 +729,6 @@ body {
   gap: 30px;
   padding: 0 20px;
   width: max-content;
-  animation: slideIn 1s ease;
 }
 
 .scroll-controls {
@@ -555,7 +736,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 30px;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 .scroll-btn {
@@ -672,15 +853,14 @@ body {
 .footer {
   background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
   color: white;
-  padding: 50px 0;
+  padding: 70px 0 40px;
 }
 
 .footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  margin-bottom: 40px;
 }
 
 .footer-logo {
@@ -702,8 +882,38 @@ body {
 }
 
 .footer-info p {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   opacity: 0.9;
+  font-size: 15px;
+}
+
+.footer-social p {
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background: #4a90e2;
+  transform: translateY(-3px);
 }
 
 /* Анимации */
@@ -718,36 +928,14 @@ body {
   }
 }
 
-@keyframes fadeInLeft {
+@keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateX(-30px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateX(100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 
@@ -763,18 +951,22 @@ body {
   }
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
+/* Адаптивность */
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 48px;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  
+  .mascot-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .features {
+    align-items: center;
   }
 }
 
-/* Адаптивность */
 @media (max-width: 768px) {
   .header-content {
     flex-direction: column;
@@ -782,16 +974,33 @@ body {
   }
   
   .hero-content {
-    flex-direction: column;
-    text-align: center;
+    padding: 180px 0 60px;
   }
   
   .hero-title {
     font-size: 36px;
   }
   
-  .footer-content {
+  .hero-subtitle {
+    font-size: 18px;
+  }
+  
+  .hero-buttons {
     flex-direction: column;
+  }
+  
+  .hero-stats {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .section-title {
+    font-size: 32px;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
     text-align: center;
   }
   
@@ -811,6 +1020,11 @@ body {
   .assistant-img {
     width: 60px;
     height: 60px;
+  }
+  
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 </style>
